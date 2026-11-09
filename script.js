@@ -116,3 +116,16 @@ addEventListener("resize", () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => { buildLights(); resizeSnow(); }, 150);
 });
+
+// ---------- dark mode: follows the system until the visitor picks ----------
+const themeToggle = document.getElementById("theme-toggle");
+const systemDark = matchMedia("(prefers-color-scheme: dark)");
+const currentTheme = () => document.documentElement.dataset.theme || (systemDark.matches ? "dark" : "light");
+themeToggle.checked = currentTheme() === "dark";
+
+themeToggle.addEventListener("change", () => {
+  const t = themeToggle.checked ? "dark" : "light";
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem("theme", t); } catch (e) {}
+});
+systemDark.addEventListener("change", () => { themeToggle.checked = currentTheme() === "dark"; });

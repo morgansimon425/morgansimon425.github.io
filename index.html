@@ -10,16 +10,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // apply a saved theme before the page paints, to avoid a flash
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
 <body>
   <canvas id="snow" aria-hidden="true"></canvas>
   <div id="lights" aria-hidden="true"></div>
 
-  <label class="snow-toggle">
-    <input type="checkbox" id="snow-toggle" checked />
-    <span class="switch" aria-hidden="true"></span>
-    <span>snow</span>
-  </label>
+  <div class="controls">
+    <label class="toggle" data-icon="🌙">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="switch" aria-hidden="true"></span>
+      <span>dark</span>
+    </label>
+    <label class="toggle" data-icon="❄">
+      <input type="checkbox" id="snow-toggle" checked />
+      <span class="switch" aria-hidden="true"></span>
+      <span>snow</span>
+    </label>
+  </div>
 
   <main>
     <header class="hero card">
