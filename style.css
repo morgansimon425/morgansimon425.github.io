@@ -154,9 +154,10 @@ h2 {
 .icon { height: 26px; width: auto; }
 
 .facts { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; }
+.about-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.facts { gap: 12px; }
 .facts span {
-  display: inline-block;
-  min-width: 104px;
+  display: block;
   font-weight: 700;
   color: var(--green);
 }
