@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Morgan Simon</title>
+  <meta name="description" content="Morgan Simon: machine learning engineer at JMP and computer science grad student at NC State." />
+  <link rel="icon" href="assets/star.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div id="lights" aria-hidden="true"></div>
+
+  <label class="snow-toggle">
+    <input type="checkbox" id="snow-toggle" checked />
+    <span class="switch" aria-hidden="true"></span>
+    <span>snow</span>
+  </label>
+
+  <main>
+    <header class="hero card">
+      <img class="avatar pixel" src="assets/bunny.svg" alt="Pixel bunny wearing a red scarf" width="128" height="144" />
+      <div>
+        <p class="eyebrow">˚₊‧ hello! ‧₊˚</p>
+        <h1>i'm Morgan Simon</h1>
+        <p class="roles">Machine Learning Engineer @ JMP <span class="dot">⋆</span> CS Grad Student @ NC State</p>
+        <p>I like making machine learning work in the real world: good data, honest evaluation, and software that's tested like any other software.</p>
+        <nav class="buttons">
+          <a class="btn" href="https://github.com/morgansimon425">GitHub</a>
+          <!-- TODO: replace with your LinkedIn URL -->
+          <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">LinkedIn</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" id="about">
+      <h2><img class="icon pixel" src="assets/tree.svg" alt="" width="22" height="28" /> about</h2>
+      <p>I'm a machine learning engineer at JMP and a computer science graduate student at NC State. I'm especially interested in LLMs and in what it takes to make models dependable once they leave the notebook.</p>
+      <ul class="facts">
+        <li><span>working on</span> applied ML at JMP</li>
+        <li><span>studying</span> computer science at NC State</li>
+        <li><span>into</span> LLMs, evaluation, well-tested software</li>
+        <!-- add a fun fact here! e.g. <li><span>fun fact</span> ...</li> -->
+      </ul>
+    </section>
+
+    <section class="card" id="projects">
+      <h2><img class="icon pixel" src="assets/present.svg" alt="" width="26" height="24" /> projects</h2>
+      <div class="grid">
+        <a class="project" href="https://github.com/morgansimon425/PackPlate">
+          <h3>PackPlate</h3>
+          <p>A dining guide for NC State students, built as a team. It shows menus, hours, and nutrition for every campus location and filters by dietary needs for whole groups.</p>
+          <p class="tags"><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>CI + tests</span></p>
+        </a>
+        <div class="project soon">
+          <h3>more coming soon</h3>
+          <p>New projects will show up here ✧</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <h2><img class="icon pixel" src="assets/cocoa.svg" alt="" width="26" height="24" /> say hi</h2>
+      <p>The best way to reach me is <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">LinkedIn</a>. I'm always happy to chat about ML, LLMs, or grad school.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="trees" aria-hidden="true">
+      <img class="pixel" src="assets/tree.svg" alt="" width="44" height="56" />
+      <img class="pixel" src="assets/tree.svg" alt="" width="66" height="84" />
+      <img class="pixel" src="assets/present.svg" alt="" width="36" height="33" />
+      <img class="pixel" src="assets/tree.svg" alt="" width="44" height="56" />
+    </div>
+    <div class="ground"></div>
+    <p>© 2026 Morgan Simon <span class="dot">⋆</span> happy holidays ❄</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
